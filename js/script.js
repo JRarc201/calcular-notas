@@ -22,9 +22,9 @@ let porce2 = document.getElementById("porce2");
 let porce3 = document.getElementById("porce3");
 
 // --- IMAGENES --- 
-const checkIcon = "../images/iconosResultado/comprobado.png";
-const alertIcon = "../images/iconosResultado/signo-de-exclamacion.png";
-const errorIcon = "../images/iconosResultado/infeliz.png"
+const checkIcon = "https://upload.wikimedia.org/wikipedia/commons/5/56/Check_icon.png";
+const alertIcon = "https://cdn-icons-png.freepik.com/512/5585/5585025.png";
+const errorIcon = "https://cdn-icons-png.flaticon.com/512/9426/9426986.png"
 //Variable para seleccionar el icono con un if
 let imagenIcon;
 //Variable para Mensaje de nota final
