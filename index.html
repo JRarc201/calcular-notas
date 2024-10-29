@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcular Notas</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="images/calculadora.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/a48e49ea94.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <main class="container">
+        <h2>Calcular Notas</h2>
+        <div class="containerCampos">
+            <div class="camposNotas" id="camposNotas">
+                <input type="text" placeholder="Nota 1" id="nota1">
+                <input type="text" placeholder="Nota 2" id="nota2">
+                <input type="text" placeholder="Nota 3" id="nota3">
+            </div>
+            <div class="camposPorcentaje" id="camposPorcentaje">
+                <input type="text" placeholder="%" id="porce1">
+                <input type="text" placeholder="%" id="porce2">
+                <input type="text" placeholder="%" id="porce3">
+            </div>
+        </div>
+        <div class="agregarCampo" id="divTexto">
+        </div>
+        <button id="calcular" class="botones">Calcular</button>
+    </main>
+    <!-- VENTANA MODAL -->
+    <dialog id="ventanaModal">
+        <!-- EL CONTENIDO SE GENERARÁ EN EL ARCHIVO JS (Locación: [carpeta]:/js/script.js) -->
+    </dialog>
+    <script src="js/script.js"></script>
+</body>
+</html>

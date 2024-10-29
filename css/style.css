@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body{
+    background-image: url(../images/pexels-n-voitkevich-6863262.jpg);
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 60vh;
+}
+
+.container{
+    background-color: #e9e6e3fa;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    border: 1px solid #cac6c1;
+
+}
+
+.container h2{
+    font-family: "Montserrat", sans-serif;
+    color: #464646;
+    font-weight: 400;
+}
+
+.containerCampos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.camposNotas, .camposPorcentaje{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.camposNotas > input, .camposPorcentaje > input{
+    width: 150px;
+    height: 40px;
+    border: 1px solid #cccbcb;
+    border-radius: 4px;
+    padding-left: 5px;
+    box-shadow: 10px;
+
+}
+
+.eliminarCampos{
+    display: flex;
+    flex-direction: column;
+    gap: 34px;
+}
+
+.fa-solid, .fa-ban{
+    color: #578f79;
+    margin-left: 3px;
+    
+}
+
+.agregarCampo{
+    width: 100%;
+    padding: 5px 0 5px 0;
+}
+.agregarCampo > small{
+    color: #578f79;
+    cursor: pointer;
+    &:hover{
+        text-decoration: underline;
+    }
+}
+
+.botones{
+    height: 40px;
+    width: 90px;
+    font-size: 15px;
+    background-color: #0e0e0e;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    &:hover{
+        background-color: #353535;
+        cursor: pointer;
+    }
+    &:active{
+        background-color: #0e0e0e;
+    }
+}
+
+.camposNotas > input, .camposPorcentaje > input:focus{
+    outline: none;
+}
+ /* ESTILOS DE LA VENTANA MODAL */
+#ventanaModal[open]{
+    border-radius: 10px;
+    border: 1px solid #c9c9c9;
+    display: flex;
+    gap: 20px;
+    align-items: center; 
+    background-color: #e9e6e3;
+    color: #4d4d4d;
+    font-family: sans-serif;
+    text-align: center;
+    scale: 1;
+    transition: scale .4s ease-in-out;
+
+    @starting-style{
+        scale: 0;
+    }
+}
+
+#ventanaModal{
+    transition: scale .4s ease, 
+    display .3s ease allow-discrete;
+    scale: 0;
+    border: 1px solid #c9c9c9;
+}
+
+#icon{
+    height: 100px;
+}
+
+.cuadroResultado{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 250px;
+}
+
+#cerrarModal{
+    border: none;
+    border-radius: 4px;
+    color: #fffefe;
+    background-color: black;
+    height: 40px;
+    width: 90px;
+    font-size: 15px;
+}
