@@ -89,41 +89,24 @@ calcular.addEventListener('click', () => {
                     ((parseFloat(nota4)*porce4)/100);
     }
 
+    notaFinal = notaFinal.toFixed(2);
     //IF PARA LA IMAGEN DE LA MODAL
     if(notaFinal < 3){
         imagenIcon = errorIcon;
-        mensajeNota = "No pudiste pasas :'( </br> Te deseamos suerte para </br> la proxima"
+        mensajeNota = "No pudiste pasar :'( </br> Esfuerzate para la proxima!!, ¡puedes mejorar y alcanzar tus metas!"
     }else if(notaFinal >= 3 && notaFinal < 3.3){
         imagenIcon = alertIcon;
-        mensajeNota = "Pasaste por porquito!! </br> Esfuerzate más para </br>la proxima :D";
+        mensajeNota = "Pasaste por porquito!! </br> ¡Estás en un buen camino. Con un poco más de esfuerzo, puedes llegar aún más alto.";
     }else if(notaFinal => 3.3){
         imagenIcon = checkIcon;
-        mensajeNota = "Felicidades!! </br> Lo hiciste muy bien ^^";
+        mensajeNota = "Felicidades!! </br> Has alcanzado un excelente promedio. Sigue así, ¡el esfuerzo vale la pena!";
     }
 
-    const iconResultado = document.createElement('div');
-    iconResultado.id = "iconResultado";
-    iconResultado.innerHTML = `<img id="icon" src="${imagenIcon}" alt="">`;
+    const imagenNota = document.querySelector("#icon");
+    imagenNota.src = `${imagenIcon}`;
+    const notaP = document.querySelector("#notaP").innerHTML = `Resultado: ${notaFinal}`;
+    const mensajeP = document.querySelector("#mensajeP").innerHTML = `${mensajeNota}`;
 
-
-    const cuadroResultado = document.createElement('div');
-    cuadroResultado.id = "cuadroResultado";
-    cuadroResultado.innerHTML = `<p>Resultado: ${notaFinal.toFixed(2)}</p>
-                                <p>${mensajeNota}</p>
-                                 <form method="dialog">
-                                    <button class="botones" id="cerrarModal">Cerrar</button>
-                                 </form>`;
-                                 
-    
-    dialog.appendChild(iconResultado);
-    dialog.appendChild(cuadroResultado);
-    dialog.showModal();
-    }
-
-    const cerrarModal = document.querySelector("#cerrarModal");
-    cerrarModal.addEventListener('click', () => {
-        setTimeout(()=> {
-
-        },3000);
-    })
+        dialog.showModal();                      
+    }  
 });

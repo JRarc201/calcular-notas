@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP');
+
+
 body{
     background-image: url(../images/pexels-n-voitkevich-6863262.jpg);
     background-size: cover; 
@@ -51,14 +56,13 @@ body{
     border-radius: 4px;
     padding-left: 5px;
     box-shadow: 10px;
+    font-size: 17px;
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
 
 }
 
-.eliminarCampos{
-    display: flex;
-    flex-direction: column;
-    gap: 34px;
-}
 
 .fa-solid, .fa-ban{
     color: #578f79;
@@ -71,8 +75,10 @@ body{
     padding: 5px 0 5px 0;
 }
 .agregarCampo > small{
+    font-family: "Noto Sans JP", sans-serif;
     color: #578f79;
     cursor: pointer;
+    
     &:hover{
         text-decoration: underline;
     }
@@ -103,12 +109,13 @@ body{
     border-radius: 10px;
     border: 1px solid #c9c9c9;
     display: flex;
-    gap: 20px;
+    flex-direction: column;
     align-items: center; 
     background-color: #e9e6e3;
     color: #4d4d4d;
     font-family: sans-serif;
     text-align: center;
+    /*El codigo de abajo establece la animación*/
     scale: 1;
     transition: scale .4s ease-in-out;
 
@@ -118,14 +125,36 @@ body{
 }
 
 #ventanaModal{
+    border-radius: 10px;
+    border: 1px solid #c9c9c9;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    background-color: #e9e6e3;
+    color: #4d4d4d;
+    font-family: sans-serif;
+    text-align: center;
+    /*El codigo de abajo establece la animación*/
     transition: scale .4s ease, 
     display .3s ease allow-discrete;
     scale: 0;
-    border: 1px solid #c9c9c9;
+    
+}
+
+#ventanaModal > p{
+    font-weight: 600;
+    font-size: 25px;
+}
+
+#cuadroResultado > p{
+    font-size: 17px;
+    line-height: 1.2;
+    max-width: 300px;
 }
 
 #icon{
-    height: 100px;
+    height: 150px;
+    padding: 2px 30px;
 }
 
 .cuadroResultado{
